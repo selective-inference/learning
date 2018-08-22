@@ -1,12 +1,3 @@
-Some methods to learn selection probability.
-
-Pseudocode
-----------
-
-For simple selection procedures, this pseudocode describes
-our approach
-
-```
 import numpy as np
 from copy import copy
 from selection.distributions.discrete_family import discrete_family
@@ -160,4 +151,3 @@ weight_val = weight_fn(target_val) * ndist.pdf(target_val / np.sqrt(target_cov[0
 exp_family = discrete_family(target_val, weight_val)  
 pivot = exp_family.cdf(true_target, observed_target)
 interval = exp_family.equal_tailed_interval(observed_target) 
-```
