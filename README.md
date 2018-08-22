@@ -7,14 +7,6 @@ For simple selection procedures, this pseudocode describes
 our approach
 
 ```
-import numpy as np
-from copy import copy
-from selection.distributions.discrete_family import discrete_family
-from scipy.stats import norm as ndist
-import rpy2.robjects as rpy
-import rpy2.robjects.numpy2ri
-rpy.r('library(splines)')
-
 # description of statistical problem
 
 n = 100
