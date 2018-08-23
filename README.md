@@ -178,3 +178,10 @@ exp_family = discrete_family(target_val, weight_val)
 pivot = exp_family.cdf(true_target / target_cov[0, 0], x=observed_target)
 interval = exp_family.equal_tailed_interval(observed_target, alpha=0.1) # for natural parameter, must be rescaled
 ```
+
+Potential speedups
+------------------
+
+- We can condition on "parts" of each draw of the sampler, in particular if we condition on the
+projection of the rejection `sample - center` onto direction then resampling on the ray can be sped up for
+some things like LASSO. Could be some cost in power.
